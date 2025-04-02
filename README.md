@@ -241,8 +241,8 @@ MIT License - Consulte o arquivo [LICENSE](LICENSE) para detalhes.
 
 ---
 
-**Desenvolvido por** [Lucas M. Braga]  
-📧 [seu@email.com](lucasmb.7@gmail.com)  
+**Desenvolvido por Lucas M. Braga**
+📧 [Email](lucasmb.7@gmail.com)  
 🔗 [LinkedIn](https://www.linkedin.com/in/lucas-braga-dev/)  
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://python.org)
