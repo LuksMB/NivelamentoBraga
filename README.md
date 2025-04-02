@@ -10,7 +10,6 @@ Sistema integrado para coleta, processamento, armazenamento e visualização de 
 - **Armazenamento flexível** (PostgreSQL ou MySQL)
 - **API documentada** com FastAPI
 - **Dashboard interativo** em Vue.js
-- **100% containerizável** com Docker
 
 ---
 
@@ -21,8 +20,7 @@ Sistema integrado para coleta, processamento, armazenamento e visualização de 
 | **Backend**      | Python 3.10+, FastAPI, SQLAlchemy, Pandas, Alembic (migrations)             |
 | **Frontend**     | Vue 3, Vite, Axios, Chart.js, Tailwind CSS                                  |
 | **Bancos**       | PostgreSQL (psycopg2), MySQL (mysql-connector-python)                       |
-| **Infra**        | Docker, Docker-Compose, Poetry (gerenciamento de dependências)                              |
-| **Testes**       | pytest (backend), Vitest (frontend)                                         |
+| **Infra**        | Poetry (gerenciamento de dependências)                                      |
 
 ---
 
@@ -31,7 +29,6 @@ Sistema integrado para coleta, processamento, armazenamento e visualização de 
 ### **Pré-requisitos**
 - Python 3.10+
 - Node.js 18+
-- Docker (opcional)
 - Poetry (`pip install poetry`)
 
 ---
@@ -50,7 +47,7 @@ cp .env.example .env
 Edite o `.env` com suas credenciais:
 
 ```ini
-# Escolha UM banco principal ou use ambos
+# Escolha um banco principal
 DATABASE_TYPE="postgresql"  # ou "mysql"
 
 # PostgreSQL
@@ -86,18 +83,6 @@ npm install
 
 ---
 
-### **3. Execução com Docker (Recomendado)**
-
-```bash
-# Inicie todos os serviços
-docker-compose up -d
-
-# Ou para desenvolvimento:
-docker-compose -f docker-compose.dev.yml up --build
-```
-
----
-
 ### **4. Execução Manual**
 
 #### **Backend**
@@ -122,15 +107,16 @@ data-pipeline/
 ├── backend/
 │   ├── src/
 │   │   ├── db/                     # Configurações de banco
-|   |   |   ├── connections/
+│   │   │   ├── connections/
 │   │   │   │   ├── postgres.py     # Conexão PostgreSQL
 │   │   │   │   ├── mysql.py        # Conexão MySQL
 │   │   │   └── models.py           # Modelos SQLAlchemy
 │   │   ├── api/                    # Endpoints FastAPI
-│   │   ├── pipeline/               # ETL (extract, transform, load)
-│   │   └── main.py                 # Ponto de entrada
-│   ├── migrations/                 # Scripts Alembic
-│   └── tests/
+│   │   └── pipeline/               # ETL (extract, transform, load)
+│   ├── data/                       # Scripts Alembic
+│   │   ├── raw/                    # Arquivos brutos
+│   │   └── processed/              # Arquivos processados
+│   └── migrations/                 # Scripts Alembic
 ├── frontend/
 │   ├── src/
 │   │   ├── assets/
@@ -140,12 +126,10 @@ data-pipeline/
 │   │   ├── views/                  # Páginas
 │   │   └── main.js                 # Inicialização Vue
 │   └── vite.config.js
-├── data/                           # Dados processados
-├── docker-compose.yml              # Produção
-├── docker-compose.dev.yml          # Desenvolvimento
 ├── pyproject.toml                  # Dependências do backend
 ├── package.json                    # Dependências do frontend
 ├── LICENSE
+├── README_NIVELAMENTO.md           #Explicação do projeto com ênfase nas entregas do nivelamento
 └── README.md
 ```
 
@@ -162,36 +146,6 @@ data-pipeline/
 
 Acesse a documentação interativa em:  
 `http://localhost:8000/docs`
-
----
-
-## 🧪 **Testes**
-
-```bash
-# Backend
-cd backend
-poetry run pytest
-
-# Frontend
-cd ../frontend
-npm run test:unit
-```
-
----
-
-## 🐳 **Docker Compose**
-
-Dois arquivos disponíveis:
-
-1. **`docker-compose.yml`** (Produção):
-   - PostgreSQL + MySQL
-   - Backend otimizado
-   - Frontend buildado
-
-2. **`docker-compose.dev.yml`** (Desenvolvimento):
-   - Hot-reload para Vue.js
-   - Banco de dados com volumes persistentes
-   - Monitoramento de logs
 
 ---
 

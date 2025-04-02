@@ -18,7 +18,7 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "dataexploring", from = "src"}]
+packages = [{include = "src", from = "backend"}]
 
 
 [tool.poetry.group.dev.dependencies]
