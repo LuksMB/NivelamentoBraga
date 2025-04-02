@@ -3,6 +3,8 @@
 ## Estrutura do Projeto para Análise das Questões
 Este documento complementar descreve a estrutura básica do projeto para fins de análise e avaliação do nivelamento proposto, indicando onde cada questão está sendo tratada no código e onde os arquivos resultantes são armazenados.
 
+## Observação: As questões devem ser executadas em ordem para o correto funcionamento
+
 ### Questão 1 - Extração de Dados
 - **Arquivo de implementação**: `backend/src/pipeline/data_fetch.py`  
 - **Destino dos arquivos**:
