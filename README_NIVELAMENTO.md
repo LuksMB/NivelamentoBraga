@@ -22,6 +22,6 @@ Este documento complementar descreve a estrutura básica do projeto para fins de
 - **Saídas geradas**:
   - `dados_consolidados.csv` (últimos 2 anos) → `backend/data/processed/`  
   - `relatorio_cadop.csv` (dados cadastrais) → `backend/data/processed/`
-- **Códigos de implementação**: `backend/db/pipeline/data_prepare.py` 
+- **Códigos de sql**: `backend/migrations/` 
 
 Esta estrutura foi planejada para manter uma separação clara entre as etapas do processo e facilitar a avaliação do projeto sem danificar sua estrutura.

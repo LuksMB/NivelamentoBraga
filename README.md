@@ -7,7 +7,6 @@ Sistema integrado para coleta, processamento, armazenamento e visualização de 
 ## 🌟 **Recursos Principais**
 - **Extração de dados** de múltiplas fontes
 - **Processamento** com Pandas (CSV, JSON)
-- **Armazenamento flexível** (PostgreSQL ou MySQL)
 - **API documentada** com FastAPI
 - **Dashboard interativo** em Vue.js
 
@@ -17,9 +16,9 @@ Sistema integrado para coleta, processamento, armazenamento e visualização de 
 
 | Componente       | Tecnologias                                                                 |
 |------------------|-----------------------------------------------------------------------------|
-| **Backend**      | Python 3.10+, FastAPI, SQLAlchemy, Pandas, Alembic (migrations)             |
+| **Backend**      | Python 3.10+, FastAPI, Pandas                                               |
 | **Frontend**     | Vue 3, Vite, Axios, Chart.js, Tailwind CSS                                  |
-| **Bancos**       | PostgreSQL (psycopg2), MySQL (mysql-connector-python)                       |
+| **Bancos**       | MySQL (pymysql)                                                             |
 | **Infra**        | Poetry (gerenciamento de dependências)                                      |
 
 ---
@@ -48,10 +47,7 @@ Edite o `.env` com suas credenciais:
 
 ```ini
 # Escolha um banco principal
-DATABASE_TYPE="postgresql"  # ou "mysql"
-
-# PostgreSQL
-POSTGRES_URL="postgresql://user:password@localhost:5432/db_name"
+DATABASE_TYPE="mysql"
 
 # MySQL
 MYSQL_URL="mysql+mysqlconnector://user:password@localhost:3306/db_name"
@@ -88,7 +84,6 @@ npm install
 #### **Backend**
 ```bash
 cd backend
-poetry run alembic upgrade head  # Aplica migrations
 poetry run uvicorn src.main:app --reload
 ```
 
@@ -106,17 +101,12 @@ npm run dev
 data-pipeline/
 ├── backend/
 │   ├── src/
-│   │   ├── db/                     # Configurações de banco
-│   │   │   ├── connections/
-│   │   │   │   ├── postgres.py     # Conexão PostgreSQL
-│   │   │   │   ├── mysql.py        # Conexão MySQL
-│   │   │   └── models.py           # Modelos SQLAlchemy
 │   │   ├── api/                    # Endpoints FastAPI
 │   │   └── pipeline/               # ETL (extract, transform, load)
 │   ├── data/                       # Scripts Alembic
 │   │   ├── raw/                    # Arquivos brutos
 │   │   └── processed/              # Arquivos processados
-│   └── migrations/                 # Scripts Alembic
+│   └── migrations/                 # Scripts .sql
 ├── frontend/
 │   ├── src/
 │   │   ├── assets/
@@ -140,42 +130,11 @@ data-pipeline/
 | Método | Rota               | Descrição                      |
 |--------|--------------------|--------------------------------|
 | GET    | `/api/data`        | Lista todos os registros       |
-| GET    | `/api/data/{id}`   | Detalhes de um registro        |
+| GET    | `/api/relevant`    | Detalhes de um registro        |
 | POST   | `/api/search`      | Busca textual nos dados        |
-| GET    | `/api/stats`       | Métricas gerais                |
 
 Acesse a documentação interativa em:  
 `http://localhost:8000/docs`
-
----
-
-## 📌 **Dicas Importantes**
-
-1. **Migrações de Banco**:
-   ```bash
-   alembic revision --autogenerate -m "descrição"
-   alembic upgrade head
-   ```
-
-2. **Switching Databases**:
-   ```python
-   # Use SQLAlchemy Core para queries complexas
-   from sqlalchemy import text
-   result = db.execute(text("SELECT * FROM data WHERE ..."))
-   ```
-
-3. **Frontend-Backend**:
-   ```javascript
-   // frontend/src/composables/useApi.js
-   import axios from 'axios';
-   
-   export default function useApi() {
-     const search = async (query) => {
-       return await axios.get('/api/search', { params: { query } });
-     };
-     return { search };
-   }
-   ```
 
 ---
 
