@@ -1,0 +1,6 @@
+# Arquivos de ambiente
+.env
+
+# Pastas de dados brutos e processados
+backend/data/raw/
+backend/data/processed/
