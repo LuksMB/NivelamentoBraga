@@ -40,17 +40,6 @@ Sistema integrado para coleta, processamento, armazenamento e visualização de 
 git clone https://github.com/LuksMB/NivelamentoBraga.git
 cd NivelamentoBraga
 
-Edite o `.env` com suas credenciais:
-
-```ini
-# API
-API_HOST="0.0.0.0"
-API_PORT=8000
-
-# Frontend
-VITE_API_URL="http://localhost:8000"
-```
-
 ---
 
 ### **2. Instalação**
@@ -105,9 +94,9 @@ data-pipeline/
 │   ├── src/
 │   │   ├── assets/
 │   │   └── App.vue                 # Inicialização Vue
+│   ├── package.json                    # Dependências do frontend
 │   └── vite.config.js
 ├── pyproject.toml                  # Dependências do backend
-├── package.json                    # Dependências do frontend
 ├── LICENSE
 ├── README_NIVELAMENTO.md           #Explicação do projeto com ênfase nas entregas do nivelamento
 └── README.md
