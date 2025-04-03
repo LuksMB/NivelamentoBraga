@@ -59,7 +59,12 @@ def download_zip_and_consolidate_csv(urls : list, output_dir : Path = Path("../.
         with zipfile.ZipFile(zip_name, 'r') as zip_ref:
             zip_ref.extractall(output_dir)
 
-        dfs.append(pd.read_csv(csv_name, sep=';'))
+        # Adicionado conversão de vírgula para ponto nas colunas 5 e 6, para correção de decimais
+        df = pd.read_csv(csv_name, sep=';', converters={
+            4: lambda x: x.replace(',', '.') if isinstance(x, str) else x,
+            5: lambda x: x.replace(',', '.') if isinstance(x, str) else x
+        })
+        dfs.append(df)
 
         os.remove(zip_name)
         os.remove(csv_name)

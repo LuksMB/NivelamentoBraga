@@ -1,6 +1,6 @@
 # **📊 Data Pipeline: Processamento e Visualização de Dados**  
 
-Sistema integrado para coleta, processamento, armazenamento e visualização de dados com suporte a **PostgreSQL** e **MySQL**, incluindo **API REST** (FastAPI) e **interface web** (Vue.js).
+Sistema integrado para coleta, processamento, armazenamento e visualização de dados com suporte a **MySQL**, incluindo **API REST** (FastAPI) e **interface web** (Vue.js).
 
 ---
 
@@ -18,7 +18,7 @@ Sistema integrado para coleta, processamento, armazenamento e visualização de 
 |------------------|-----------------------------------------------------------------------------|
 | **Backend**      | Python 3.10+, FastAPI, Pandas                                               |
 | **Frontend**     | Vue 3, Vite, Axios, Chart.js, Tailwind CSS                                  |
-| **Bancos**       | MySQL (pymysql)                                                             |
+| **Bancos**       | Scripts para MySQL                                                          |
 | **Infra**        | Poetry (gerenciamento de dependências)                                      |
 
 ---
@@ -29,6 +29,7 @@ Sistema integrado para coleta, processamento, armazenamento e visualização de 
 - Python 3.10+
 - Node.js 18+
 - Poetry (`pip install poetry`)
+- MySQL
 
 ---
 
@@ -36,22 +37,12 @@ Sistema integrado para coleta, processamento, armazenamento e visualização de 
 
 ```bash
 # Clone o repositório
-git clone https://github.com/LuksMB/data-pipeline.git
-cd data-pipeline
-
-# Configure as variáveis de ambiente
-cp .env.example .env
-```
+git clone https://github.com/LuksMB/NivelamentoBraga.git
+cd NivelamentoBraga
 
 Edite o `.env` com suas credenciais:
 
 ```ini
-# Escolha um banco principal
-DATABASE_TYPE="mysql"
-
-# MySQL
-MYSQL_URL="mysql+mysqlconnector://user:password@localhost:3306/db_name"
-
 # API
 API_HOST="0.0.0.0"
 API_PORT=8000
@@ -102,8 +93,8 @@ data-pipeline/
 ├── backend/
 │   ├── src/
 │   │   ├── api/                    # Endpoints FastAPI
-│   │   └── pipeline/               # ETL (extract, transform, load)
-│   ├── data/                       # Scripts Alembic
+│   │   └── pipeline/               # fetch, prepare e transform scripts
+│   ├── data/                       
 │   │   ├── raw/                    # Arquivos brutos
 │   │   └── processed/              # Arquivos processados
 │   └── migrations/                 # Scripts .sql
@@ -127,11 +118,11 @@ data-pipeline/
 
 ## 🔍 **Endpoints da API**
 
-| Método | Rota               | Descrição                      |
-|--------|--------------------|--------------------------------|
-| GET    | `/api/data`        | Lista todos os registros       |
-| GET    | `/api/relevant`    | Detalhes de um registro        |
-| POST   | `/api/search`      | Busca textual nos dados        |
+| Método | Rota               | Descrição                               |
+|--------|--------------------|-----------------------------------------|
+| GET    | `/api/data`        | Lista todos os registros                |
+| GET    | `/api/relevant`    | Detalhes de registros relevantes        |
+| POST   | `/api/search`      | Busca textual nos dados                 |
 
 Acesse a documentação interativa em:  
 `http://localhost:8000/docs`
