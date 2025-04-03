@@ -17,7 +17,7 @@ Sistema integrado para coleta, processamento, armazenamento e visualização de 
 | Componente       | Tecnologias                                                                 |
 |------------------|-----------------------------------------------------------------------------|
 | **Backend**      | Python 3.10+, FastAPI, Pandas                                               |
-| **Frontend**     | Vue 3, Vite, Axios, Chart.js, Tailwind CSS                                  |
+| **Frontend**     | Vue 3, Vite, Axios                                                          |
 | **Bancos**       | Scripts para MySQL                                                          |
 | **Infra**        | Poetry (gerenciamento de dependências)                                      |
 
@@ -64,7 +64,7 @@ poetry install
 
 #### **Frontend**
 ```bash
-cd ../frontend
+cd frontend
 npm install
 ```
 
@@ -74,13 +74,16 @@ npm install
 
 #### **Backend**
 ```bash
-cd backend
-poetry run uvicorn src.main:app --reload
+cd backend/src/api
+poetry shell                   
+...
+poetry run uvicorn main:app --reload
 ```
 
 #### **Frontend**
 ```bash
-cd ../frontend
+cd frontend
+npm install
 npm run dev
 ```
 

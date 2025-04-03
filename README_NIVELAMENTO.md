@@ -22,6 +22,11 @@ Este documento complementar descreve a estrutura básica do projeto para fins de
 - **Saídas geradas**:
   - `dados_consolidados.csv` (últimos 2 anos) → `backend/data/processed/`  
   - `relatorio_cadop.csv` (dados cadastrais) → `backend/data/processed/`
-- **Códigos de sql**: `backend/migrations/` 
+- **Códigos de sql**: `backend/migrations/`
+
+### Questão 4 - Interface + API
+- **Código da API**: `backend/src/api/main.py`  
+- **Códigos da interface**: `frontend/`
+- **Testes no Postman/Insomnia**: `backend/src/api/HTTP Collection for Tests`
 
 Esta estrutura foi planejada para manter uma separação clara entre as etapas do processo e facilitar a avaliação do projeto sem danificar sua estrutura.

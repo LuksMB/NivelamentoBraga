@@ -1,0 +1,341 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v11.0.1"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2025-04-03T02:48:47.170Z",
+				"time": 3.311,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8000/operadoras/modalidades/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.0.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Thu, 03 Apr 2025 02:48:05 GMT"
+						},
+						{
+							"name": "server",
+							"value": "uvicorn"
+						},
+						{
+							"name": "content-length",
+							"value": "207"
+						},
+						{
+							"name": "content-type",
+							"value": "application/json"
+						}
+					],
+					"content": {
+						"size": 207,
+						"mimeType": "application/json",
+						"text": "{\"modalidades\":[\"Administradora de Benefícios\",\"Autogestão\",\"Cooperativa Médica\",\"Cooperativa odontológica\",\"Filantropia\",\"Medicina de Grupo\",\"Odontologia de Grupo\",\"Seguradora Especializada em Saúde\"]}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 3.311,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Listar Modalidades"
+			},
+			{
+				"startedDateTime": "2025-04-03T02:48:47.170Z",
+				"time": 23.892,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8000/operadoras/ufs/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.0.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Thu, 03 Apr 2025 02:47:42 GMT"
+						},
+						{
+							"name": "server",
+							"value": "uvicorn"
+						},
+						{
+							"name": "content-length",
+							"value": "144"
+						},
+						{
+							"name": "content-type",
+							"value": "application/json"
+						}
+					],
+					"content": {
+						"size": 144,
+						"mimeType": "application/json",
+						"text": "{\"ufs\":[\"AC\",\"AL\",\"AM\",\"AP\",\"BA\",\"CE\",\"DF\",\"ES\",\"GO\",\"MA\",\"MG\",\"MS\",\"MT\",\"PA\",\"PB\",\"PE\",\"PI\",\"PR\",\"RJ\",\"RN\",\"RO\",\"RR\",\"RS\",\"SC\",\"SE\",\"SP\",\"TO\"]}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 23.892,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Listar UFS"
+			},
+			{
+				"startedDateTime": "2025-04-03T02:48:47.170Z",
+				"time": 4.388999999999999,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8000/operadoras/419761",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.0.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Thu, 03 Apr 2025 02:46:51 GMT"
+						},
+						{
+							"name": "server",
+							"value": "uvicorn"
+						},
+						{
+							"name": "content-length",
+							"value": "619"
+						},
+						{
+							"name": "content-type",
+							"value": "application/json"
+						}
+					],
+					"content": {
+						"size": 619,
+						"mimeType": "application/json",
+						"text": "{\"Registro_ANS\":\"419761\",\"CNPJ\":\"19541931000125\",\"Razao_Social\":\"18 DE JULHO ADMINISTRADORA DE BENEFÍCIOS LTDA\",\"Nome_Fantasia\":\"nan\",\"Modalidade\":\"Administradora de Benefícios\",\"Logradouro\":\"RUA CAPITÃO MEDEIROS DE REZENDE\",\"Numero\":\"274\",\"Complemento\":\"nan\",\"Bairro\":\"PRAÇA DA BANDEIRA\",\"Cidade\":\"Além Paraíba\",\"UF\":\"MG\",\"CEP\":\"36660000\",\"DDD\":\"32.0\",\"Telefone\":\"34624649.0\",\"Fax\":\"nan\",\"Endereco_eletronico\":\"contabilidade@cbnassessoria.com.br\",\"Representante\":\"LUIZ HENRIQUE MARENDINO GONÇALVES\",\"Cargo_Representante\":\"SÓCIO ADMINISTRADOR\",\"Regiao_de_Comercializacao\":\"6.0\",\"Data_Registro_ANS\":\"2015-05-19\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 4.388999999999999,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Buscar Operadora por Registro ANS"
+			},
+			{
+				"startedDateTime": "2025-04-03T02:48:47.170Z",
+				"time": 9.773,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8000/operadoras/search/?query=sa%C3%BAde&campo=Razao_Social&uf=SP&modalidade=Odontologia&limit=10",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.0.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Thu, 03 Apr 2025 02:47:14 GMT"
+						},
+						{
+							"name": "server",
+							"value": "uvicorn"
+						},
+						{
+							"name": "content-length",
+							"value": "1257"
+						},
+						{
+							"name": "content-type",
+							"value": "application/json"
+						}
+					],
+					"content": {
+						"size": 1257,
+						"mimeType": "application/json",
+						"text": "{\"data\":[{\"Registro_ANS\":\"423424\",\"CNPJ\":\"35288631000132\",\"Razao_Social\":\"IPRESB - INSTITUTO DE PREVENÇÃO EM SAÚDE BUCAL LTDA\",\"Nome_Fantasia\":\"IPRESB\",\"Modalidade\":\"Odontologia de Grupo\",\"Logradouro\":\"AV DAS NACOES UNIDAS\",\"Numero\":\"10989\",\"Complemento\":\"ANDAR 2 CONJ 22 SALA 03\",\"Bairro\":\"BROOKLIN PAULISTA\",\"Cidade\":\"São Paulo\",\"UF\":\"SP\",\"CEP\":\"4578900\",\"DDD\":\"11.0\",\"Telefone\":\"41301880.0\",\"Fax\":\"nan\",\"Endereco_eletronico\":\"contato@ipresbodonto.com.br\",\"Representante\":\"JOSÉ HERMICESAR BRILHANTE PALMEIRA\",\"Cargo_Representante\":\"sócio administrador\",\"Regiao_de_Comercializacao\":\"nan\",\"Data_Registro_ANS\":\"2022-11-16\"},{\"Registro_ANS\":\"366510\",\"CNPJ\":\"1972369000129\",\"Razao_Social\":\"ORAL SAÚDE DE IBITINGA SERVIÇOS ODONTOLÓGICOS S/S LTDA\",\"Nome_Fantasia\":\"ORAL SAÚDE DE IBITINGA SERV. ODONTOL. S/S LTDA\",\"Modalidade\":\"Odontologia de Grupo\",\"Logradouro\":\"AVENIDA DOM PEDRO II\",\"Numero\":\"1095\",\"Complemento\":\"nan\",\"Bairro\":\"CENTRO\",\"Cidade\":\"Ibitinga\",\"UF\":\"SP\",\"CEP\":\"14940000\",\"DDD\":\"16.0\",\"Telefone\":\"33427336.0\",\"Fax\":\"33427336.0\",\"Endereco_eletronico\":\"oralsaudeibitinga@uol.com.br\",\"Representante\":\"RENATO LUIZ MARTINS\",\"Cargo_Representante\":\"DIRETOR\",\"Regiao_de_Comercializacao\":\"6.0\",\"Data_Registro_ANS\":\"1999-01-27\"}],\"total_results\":2}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 9.773,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Buscar Operadoras"
+			},
+			{
+				"startedDateTime": "2025-04-03T02:48:47.170Z",
+				"time": 13.19,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8000/operadoras/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.0.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Thu, 03 Apr 2025 02:44:41 GMT"
+						},
+						{
+							"name": "server",
+							"value": "uvicorn"
+						},
+						{
+							"name": "content-length",
+							"value": "5979"
+						},
+						{
+							"name": "content-type",
+							"value": "application/json"
+						}
+					],
+					"content": {
+						"size": 5979,
+						"mimeType": "application/json",
+						"text": "{\"data\":[{\"Registro_ANS\":\"419761\",\"CNPJ\":\"19541931000125\",\"Razao_Social\":\"18 DE JULHO ADMINISTRADORA DE BENEFÍCIOS LTDA\",\"Nome_Fantasia\":\"nan\",\"Modalidade\":\"Administradora de Benefícios\",\"Logradouro\":\"RUA CAPITÃO MEDEIROS DE REZENDE\",\"Numero\":\"274\",\"Complemento\":\"nan\",\"Bairro\":\"PRAÇA DA BANDEIRA\",\"Cidade\":\"Além Paraíba\",\"UF\":\"MG\",\"CEP\":\"36660000\",\"DDD\":\"32.0\",\"Telefone\":\"34624649.0\",\"Fax\":\"nan\",\"Endereco_eletronico\":\"contabilidade@cbnassessoria.com.br\",\"Representante\":\"LUIZ HENRIQUE MARENDINO GONÇALVES\",\"Cargo_Representante\":\"SÓCIO ADMINISTRADOR\",\"Regiao_de_Comercializacao\":\"6.0\",\"Data_Registro_ANS\":\"2015-05-19\"},{\"Registro_ANS\":\"421545\",\"CNPJ\":\"22869997000153\",\"Razao_Social\":\"2B ODONTOLOGIA OPERADORA DE PLANOS ODONTOLÓGICOS LTDA\",\"Nome_Fantasia\":\"nan\",\"Modalidade\":\"Odontologia de Grupo\",\"Logradouro\":\"RUA CATÃO\",\"Numero\":\"128\",\"Complemento\":\"SALA 126\",\"Bairro\":\"VILA ROMANA\",\"Cidade\":\"São Paulo\",\"UF\":\"SP\",\"CEP\":\"5049000\",\"DDD\":\"11.0\",\"Telefone\":\"34415852.0\",\"Fax\":\"nan\",\"Endereco_eletronico\":\"labmarisol@gmail.com\",\"Representante\":\"MARISOL BECHELLI\",\"Cargo_Representante\":\"SÓCIO ADMINISTRADORA\",\"Regiao_de_Comercializacao\":\"4.0\",\"Data_Registro_ANS\":\"2019-06-13\"},{\"Registro_ANS\":\"421421\",\"CNPJ\":\"27452545000195\",\"Razao_Social\":\"2CARE OPERADORA DE SAÚDE LTDA.\",\"Nome_Fantasia\":\"nan\",\"Modalidade\":\"Medicina de Grupo\",\"Logradouro\":\"RUA: BERNARDINO DE CAMPOS\",\"Numero\":\"230\",\"Complemento\":\"1º ANDAR\",\"Bairro\":\"CENTRO\",\"Cidade\":\"Campinas\",\"UF\":\"SP\",\"CEP\":\"13010151\",\"DDD\":\"19.0\",\"Telefone\":\"37901224.0\",\"Fax\":\"nan\",\"Endereco_eletronico\":\"ans.plano@hospitalcare.com.br\",\"Representante\":\"RODRIGO PINHO RIBEIRO\",\"Cargo_Representante\":\"REPRESENTANTE\",\"Regiao_de_Comercializacao\":\"5.0\",\"Data_Registro_ANS\":\"2018-10-09\"},{\"Registro_ANS\":\"422908\",\"CNPJ\":\"41788751000100\",\"Razao_Social\":\"3S ADMINISTRADORA DE BENEFICIOS LTDA\",\"Nome_Fantasia\":\"3S ADMINISTRADORA DE BENEFICIOS\",\"Modalidade\":\"Administradora de Benefícios\",\"Logradouro\":\"RUA ITÁLIA\",\"Numero\":\"33\",\"Complemento\":\"SALA 6\",\"Bairro\":\"JARDIM BONFIGLIOLI\",\"Cidade\":\"Jundiaí\",\"UF\":\"SP\",\"CEP\":\"13207280\",\"DDD\":\"11.0\",\"Telefone\":\"42263247.0\",\"Fax\":\"nan\",\"Endereco_eletronico\":\"pietrorocchi37@gmail.com\",\"Representante\":\"ANAMELIA MONTEIRO GUERRA ROCCHI\",\"Cargo_Representante\":\"SÓCIO ADMINISTRADOR\",\"Regiao_de_Comercializacao\":\"6.0\",\"Data_Registro_ANS\":\"2021-07-12\"},{\"Registro_ANS\":\"418030\",\"CNPJ\":\"13138885000131\",\"Razao_Social\":\"A.P.S. ADMINISTRADORA DE BENEFÍCOS LTDA.\",\"Nome_Fantasia\":\"A.P.S. SAÚDE.\",\"Modalidade\":\"Administradora de Benefícios\",\"Logradouro\":\"RUA VOLUNTÁRIOS DA PÁTRIA\",\"Numero\":\"2525\",\"Complemento\":\"CONJUNTO 143 - SALA 01\",\"Bairro\":\"SANTANA\",\"Cidade\":\"São Paulo\",\"UF\":\"SP\",\"CEP\":\"2401000\",\"DDD\":\"11.0\",\"Telefone\":\"45223468.0\",\"Fax\":\"nan\",\"Endereco_eletronico\":\"diretoria@apssaude.com.br\",\"Representante\":\"PERCÍVEL GAETA\",\"Cargo_Representante\":\"SóCIO-ADMINISTRADOR E REPRESEN\",\"Regiao_de_Comercializacao\":\"4.0\",\"Data_Registro_ANS\":\"2011-05-05\"},{\"Registro_ANS\":\"314668\",\"CNPJ\":\"17505793000101\",\"Razao_Social\":\"ABERTTA SAÚDE - ASSOCIAÇÃO BENEFICENTE DOS EMPREGADOS DA ARCELORMITTAL NO BRASIL\",\"Nome_Fantasia\":\"ABERTTA SAÚDE\",\"Modalidade\":\"Autogestão\",\"Logradouro\":\"AV. BERNARDO MONTEIRO\",\"Numero\":\"831\",\"Complemento\":\"Subsolo, 2º andar e 3º andar\",\"Bairro\":\"SANTA EFIGÊNIA\",\"Cidade\":\"Belo Horizonte\",\"UF\":\"MG\",\"CEP\":\"30150281\",\"DDD\":\"31.0\",\"Telefone\":\"32484300.0\",\"Fax\":\"32484377.0\",\"Endereco_eletronico\":\"abertta.ans@arcelormittal.com.br\",\"Representante\":\"RICARDO DUPIN LUSTOSA\",\"Cargo_Representante\":\"Diretor Presidente\",\"Regiao_de_Comercializacao\":\"4.0\",\"Data_Registro_ANS\":\"1998-12-28\"},{\"Registro_ANS\":\"419621\",\"CNPJ\":\"17687511000126\",\"Razao_Social\":\"ABPLUS ADMINISTRADORA DE BENEFÍCIOS LTDA.\",\"Nome_Fantasia\":\"nan\",\"Modalidade\":\"Administradora de Benefícios\",\"Logradouro\":\"AVENIDA JOSÉ DA SILVA NETO\",\"Numero\":\"200\",\"Complemento\":\"BLOCO 4, SALA 403\",\"Bairro\":\"BARRA DA TIJUCA\",\"Cidade\":\"Rio de Janeiro\",\"UF\":\"RJ\",\"CEP\":\"22775056\",\"DDD\":\"nan\",\"Telefone\":\"nan\",\"Fax\":\"nan\",\"Endereco_eletronico\":\"contato@abplus.com.br\",\"Representante\":\"ROBERTO CARLOS MACHADO RODRIGUES\",\"Cargo_Representante\":\"ADMINISTRADOR\",\"Regiao_de_Comercializacao\":\"6.0\",\"Data_Registro_ANS\":\"2014-11-13\"},{\"Registro_ANS\":\"424242\",\"CNPJ\":\"56298884000167\",\"Razao_Social\":\"ABRANGE ADMINISTRADORA DE BENEFICIOS LTDA.\",\"Nome_Fantasia\":\"ABRANGE SAÚDE\",\"Modalidade\":\"Administradora de Benefícios\",\"Logradouro\":\"RUA CEL. JOSÉ EUSEBIO\",\"Numero\":\"95.0\",\"Complemento\":\"SALA 13\",\"Bairro\":\"HIGIENOPOLIS\",\"Cidade\":\"São Paulo\",\"UF\":\"SP\",\"CEP\":\"1239030\",\"DDD\":\"11.0\",\"Telefone\":\"920554400.0\",\"Fax\":\"nan\",\"Endereco_eletronico\":\"dayanasantos@abrangesaude.com.br\",\"Representante\":\"DAYANA DOS SANTOSDE BRITO FLORÊNCIO\",\"Cargo_Representante\":\"ADMINISTRADORA\",\"Regiao_de_Comercializacao\":\"nan\",\"Data_Registro_ANS\":\"2025-01-06\"},{\"Registro_ANS\":\"418901\",\"CNPJ\":\"10458298000131\",\"Razao_Social\":\"AD SALUTE ADMINISTRADORA DE BENEFÍCIOS LTDA\",\"Nome_Fantasia\":\"AD SALUTE\",\"Modalidade\":\"Administradora de Benefícios\",\"Logradouro\":\"RUA BUENOS AIRES\",\"Numero\":\"68\",\"Complemento\":\"SALA 2901\",\"Bairro\":\"CENTRO\",\"Cidade\":\"Rio de Janeiro\",\"UF\":\"RJ\",\"CEP\":\"20070020\",\"DDD\":\"21.0\",\"Telefone\":\"35531692.0\",\"Fax\":\"nan\",\"Endereco_eletronico\":\"LEONARDO@UNIMEDICASAUDE.COM\",\"Representante\":\"JOÃO CARMO DA SILVEIRA\",\"Cargo_Representante\":\"ADMINISTRADOR\",\"Regiao_de_Comercializacao\":\"5.0\",\"Data_Registro_ANS\":\"2013-06-13\"},{\"Registro_ANS\":\"421553\",\"CNPJ\":\"28315826000169\",\"Razao_Social\":\"ADM LIFE - ADMINISTRADORA DE BENEFÍCIOS LTDA.\",\"Nome_Fantasia\":\"ADM LIFE\",\"Modalidade\":\"Administradora de Benefícios\",\"Logradouro\":\"AVENIDA PEDROSO DE MORAIS\",\"Numero\":\"272\",\"Complemento\":\"CJ 96\",\"Bairro\":\"PINHEIROS\",\"Cidade\":\"São Paulo\",\"UF\":\"SP\",\"CEP\":\"5420000\",\"DDD\":\"11.0\",\"Telefone\":\"99475503.0\",\"Fax\":\"nan\",\"Endereco_eletronico\":\"cristiane@admlife.com.br\",\"Representante\":\"NELITO JÚNIOR DE ALMEIDA SILVA\",\"Cargo_Representante\":\"Sócio Administrador\",\"Regiao_de_Comercializacao\":\"4.0\",\"Data_Registro_ANS\":\"2019-01-09\"}],\"total\":1109}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 13.19,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Listar Operadoras"
+			}
+		]
+	}
+}
