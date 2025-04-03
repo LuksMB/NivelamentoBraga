@@ -104,11 +104,7 @@ data-pipeline/
 ├── frontend/
 │   ├── src/
 │   │   ├── assets/
-│   │   ├── components/
-│   │   ├── composables/            # Lógica reutilizável
-│   │   ├── stores/                 # Pinia (gerenciamento de estado)
-│   │   ├── views/                  # Páginas
-│   │   └── main.js                 # Inicialização Vue
+│   │   └── App.vue                 # Inicialização Vue
 │   └── vite.config.js
 ├── pyproject.toml                  # Dependências do backend
 ├── package.json                    # Dependências do frontend
@@ -121,11 +117,13 @@ data-pipeline/
 
 ## 🔍 **Endpoints da API**
 
-| Método | Rota               | Descrição                               |
-|--------|--------------------|-----------------------------------------|
-| GET    | `/api/data`        | Lista todos os registros                |
-| GET    | `/api/relevant`    | Detalhes de registros relevantes        |
-| POST   | `/api/search`      | Busca textual nos dados                 |
+| Método | Rota                           | Descrição                                                                 |
+|--------|--------------------------------|---------------------------------------------------------------------------|
+| GET    | `/operadoras/`                 | Lista todas as operadoras com paginação (limit/offset)                    |
+| GET    | `/operadoras/search/`          | Busca textual em operadoras com filtros (query, campo, uf, modalidade)    |
+| GET    | `/operadoras/{registro_ans}`   | Obtém detalhes completos de uma operadora específica por registro ANS     |
+| GET    | `/operadoras/ufs/`             | Lista todos os estados (UF) disponíveis nas operadoras                    |
+| GET    | `/operadoras/modalidades/`     | Lista todas as modalidades de planos disponíveis                          |
 
 Acesse a documentação interativa em:  
 `http://localhost:8000/docs`
